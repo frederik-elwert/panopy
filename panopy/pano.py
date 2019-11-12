@@ -105,7 +105,7 @@ def main():
 
     # load all templates, and merge together
     with open(os.path.expanduser(os.path.join(DEFAULT_PATH))) as fin:
-        templates = yaml.load_all(fin)
+        templates = yaml.safe_load_all(fin)
         all_templates = dict()
         for x in templates:
             if x is not None:
